@@ -1,0 +1,52 @@
+[project]
+name = "recorder"
+version = "0.0.1"
+description = "Simple voice recorder"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+classifiers=[
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "sounddevice>=0.5.1",
+    "scipy>=1.11.3",
+    "numpy>=1.26.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "build",
+    "twine",
+    "black",
+    "flake8",
+    "mypy",
+    "isort",
+    "pandas",
+    "pre-commit",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dusking/simple_forex_algo"
+"Bug Reports" = "https://github.com/dusking/simple_forex_algo/issues"
+"Source" = "https://github.com/dusking/simple_forex_algo"
+
+[tool.black]
+line-length = 120
+ignore = "E203"
+
+[project.scripts]
+recorder = "voice_recorder_cli.main:main"
